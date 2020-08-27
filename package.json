@@ -1,0 +1,29 @@
+{
+  "name": "isarray-polyfill-for-mobx4-observablearray",
+  "version": "1.0.0",
+  "description": "Fix Array.isArray(IObservableArray) return `false` at mobx@4.x",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanyuantingfeng/isarray-polyfill-for-mobx4-observablearray.git"
+  },
+  "devDependencies": {
+    "rollup": "^2.26.5",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.0.2"
+  },
+  "keywords": [
+    "Array.isArray",
+    "mobx4"
+  ],
+  "author": "nanyuantingfeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanyuantingfeng/isarray-polyfill-for-mobx4-observablearray/issues"
+  },
+  "homepage": "https://github.com/nanyuantingfeng/isarray-polyfill-for-mobx4-observablearray#readme"
+}
