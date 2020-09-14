@@ -15,20 +15,23 @@ Array.isArray = function (arg: any): arg is any[] {
   if (__isArray(arg)) return true;
   if (arg === null || arg === undefined) return false;
 
-  if (
-    __isLength(arg.length) &&
-    __isNotNull(arg.$mobx) &&
-    __isFunction(arg.toJS) &&
-    __isFunction(arg.slice) &&
-    __isFunction(arg.push) &&
-    __isFunction(arg.pop) &&
-    __isFunction(arg.join) &&
-    __isFunction(arg.toJSON) &&
-    __isFunction(arg.intercept) &&
-    __isFunction(arg.observe)
-  ) {
-    return __isArray(arg.slice());
+  try {
+    if (
+      __isLength(arg.length) &&
+      __isNotNull(arg.$mobx) &&
+      __isFunction(arg.toJS) &&
+      __isFunction(arg.slice) &&
+      __isFunction(arg.push) &&
+      __isFunction(arg.pop) &&
+      __isFunction(arg.join) &&
+      __isFunction(arg.toJSON) &&
+      __isFunction(arg.intercept) &&
+      __isFunction(arg.observe)
+    ) {
+      return __isArray(arg.slice());
+    }
+  } catch (e){
+    return false
   }
-
   return false;
 };

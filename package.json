@@ -1,6 +1,6 @@
 {
   "name": "isarray-polyfill-for-mobx4-observablearray",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fix Array.isArray(IObservableArray) return `false` at mobx@4.x",
   "main": "index.js",
   "scripts": {
